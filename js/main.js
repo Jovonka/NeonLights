@@ -35,6 +35,7 @@ const videoSources = [
   "./videos/video2.mp4",
   "./videos/video3.mp4",
   "./videos/video4.mp4",
+  "./videos/video5.mp4",
 ];
 let currentVideoIndex = 0;
 let playbackSpeed = -10;
