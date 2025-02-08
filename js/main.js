@@ -272,7 +272,7 @@ videoLabel.style.position = "absolute";
 videoLabel.style.top = "80px";
 videoLabel.style.left = "11px";
 videoLabel.style.color = "#FFFFFF";
-videoLabel.style.fontSize = "14px";
+videoLabel.style.fontSize = "18px";
 videoLabel.style.zIndex = "9999";
 
 // Append slider and label to the document
@@ -445,7 +445,7 @@ colorLabel.style.position = "absolute";
 colorLabel.style.top = "80px";
 colorLabel.style.left = "10px";
 colorLabel.style.color = "#FFFFFF";
-colorLabel.style.fontSize = "14px";
+colorLabel.style.fontSize = "18px";
 colorLabel.style.zIndex = "9999";
 colorLabel.style.display = "none"; // Initially hidden
 
@@ -489,7 +489,7 @@ thicknessLabel.style.top = "125px";
 thicknessLabel.style.left = "1px";
 
 thicknessLabel.style.color = "#FFFFFF";
-thicknessLabel.style.fontSize = "14px";
+thicknessLabel.style.fontSize = "18px";
 thicknessLabel.style.zIndex = "9999";
 
 thicknessLabel.style.padding = "5px 10px";
@@ -540,7 +540,7 @@ twistLabel.style.position = "absolute";
 twistLabel.style.top = "217px";
 twistLabel.style.left = "4px";
 twistLabel.style.color = "#FFFFFF";
-twistLabel.style.fontSize = "14px";
+twistLabel.style.fontSize = "18px";
 twistLabel.style.zIndex = "9999";
 
 twistLabel.style.padding = "5px 10px";
@@ -585,7 +585,7 @@ bloomLabel.style.position = "absolute";
 bloomLabel.style.top = "176px";
 bloomLabel.style.left = "2px";
 bloomLabel.style.color = "#FFFFFF";
-bloomLabel.style.fontSize = "14px";
+bloomLabel.style.fontSize = "18px";
 bloomLabel.style.zIndex = "9999";
 
 bloomLabel.style.padding = "5px 10px";

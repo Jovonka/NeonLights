@@ -272,7 +272,7 @@ videoLabel.style.position = "absolute";
 videoLabel.style.top = "80px";
 videoLabel.style.left = "11px";
 videoLabel.style.color = "#FFFFFF";
-videoLabel.style.fontSize = "14px";
+videoLabel.style.fontSize = "18px";
 videoLabel.style.zIndex = "9999";
 
 // Append slider and label to the document
@@ -335,7 +335,7 @@ const uiContainer = document.createElement("div");
 uiContainer.style.position = "absolute";
 uiContainer.style.top = "0px";
 uiContainer.style.left = "5px";
-uiContainer.style.width = "150px"; 
+uiContainer.style.width = "200px"; 
 uiContainer.style.height = "100%";// Adjust width as needed
 uiContainer.style.padding = "10px";
 uiContainer.style.borderRadius = "10px";
@@ -444,7 +444,7 @@ colorLabel.style.position = "absolute";
 colorLabel.style.top = "80px";
 colorLabel.style.left = "10px";
 colorLabel.style.color = "#FFFFFF";
-colorLabel.style.fontSize = "14px";
+colorLabel.style.fontSize = "18px";
 colorLabel.style.zIndex = "9999";
 colorLabel.style.display = "none"; // Initially hidden
 
@@ -488,7 +488,7 @@ thicknessLabel.style.top = "125px";
 thicknessLabel.style.left = "1px";
 
 thicknessLabel.style.color = "#FFFFFF";
-thicknessLabel.style.fontSize = "14px";
+thicknessLabel.style.fontSize = "18px";
 thicknessLabel.style.zIndex = "9999";
 
 thicknessLabel.style.padding = "5px 10px";
@@ -539,7 +539,7 @@ twistLabel.style.position = "absolute";
 twistLabel.style.top = "217px";
 twistLabel.style.left = "4px";
 twistLabel.style.color = "#FFFFFF";
-twistLabel.style.fontSize = "14px";
+twistLabel.style.fontSize = "18px";
 twistLabel.style.zIndex = "9999";
 
 twistLabel.style.padding = "5px 10px";
@@ -549,13 +549,11 @@ twistLabel.style.borderRadius = "5px";
 // Create the descriptive text container
 const descriptionText = document.createElement("div");
 descriptionText.innerHTML = `
-    <p style="color: #FFFFFF; font-size: 11px; text-align: left; margin-top: 40px;">
+    <p style="color: #FFFFFF; font-size: 16px; text-align: left; margin-top: 40px;">
         Neon Lights is a 3D modular typeface designed in Blender and powered by Three.js, HTML, CSS, and JavaScript.
         Pull the chain to adjust sliders, press buttons, and drag letters to create your own glowing neon sign in real-time.
-        <br><br>
-        Designed by Jovonka Johnson<br>
-        Spring 2025<br>
-       Advanced Interaction Design
+      
+      
     </p>
 `;
 descriptionText.style.position = "absolute";
@@ -606,7 +604,7 @@ bloomLabel.style.position = "absolute";
 bloomLabel.style.top = "176px";
 bloomLabel.style.left = "2px";
 bloomLabel.style.color = "#FFFFFF";
-bloomLabel.style.fontSize = "14px";
+bloomLabel.style.fontSize = "18px";
 bloomLabel.style.zIndex = "9999";
 
 bloomLabel.style.padding = "5px 10px";

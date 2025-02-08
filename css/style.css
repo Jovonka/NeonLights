@@ -24,7 +24,7 @@
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  
   background: linear-gradient(45deg, #000000, #1b1b1b, #333333);
   background-size: 200% 200%;
   animation: gradientAnimation 10s infinite alternate ease-in-out;
@@ -37,11 +37,7 @@ body {
   overflow: hidden;
 }
 
-header h1 {
-  font-size: 2em;
-  font-weight: 900;
-  z-index: 2;
-}
+
 
 #container3D canvas {
   position: relative;
