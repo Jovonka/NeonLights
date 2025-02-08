@@ -50,3 +50,17 @@ button {
   color: white;
   z-index: 2; /* Ensures buttons remain above the animated background */
 }
+
+/* Style for the design credit text */
+.design-credit {
+  position: fixed;
+  bottom: 20px;
+  right: 150px; /* Adjusted to not overlap the button */
+  color: white;
+  font-size: 14px;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0.8;
+  z-index: 2;
+  pointer-events: none; /* Prevents interference with UI */
+}
