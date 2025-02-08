@@ -9,7 +9,7 @@ const scene = new THREE.Scene();
 
 // Set up the orthographic camera
 const aspect = window.innerWidth / window.innerHeight;
-const frustumSize = 20;
+const frustumSize = 30;
 const camera = new THREE.OrthographicCamera(
   (-frustumSize * aspect) /1, // left
   (frustumSize * aspect) / 1,  // right
@@ -18,7 +18,7 @@ const camera = new THREE.OrthographicCamera(
   1,                        // near
   20000                        // far
 );
-camera.position.set(-6, 11, 200); // Move the camera up along the Z-axis
+camera.position.set(-4, 27, 200); // Move the camera up along the Z-axis
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -129,7 +129,7 @@ function loadModel(i) {
 }
 
 // Load all 10 models
-for (let i = 1; i <= 13; i++) {
+for (let i = 14; i <= 39; i++) {
   loadModel(i);
 }
 // Main point light (already present)
@@ -315,7 +315,7 @@ resetButton.addEventListener("click", () => {
     // Reset Twist Effect
     model.traverse((child) => {
       if (child.isMesh) {
-        child.rotation.y = 0; // Reset rotation to default
+        child.rotation.z = 0; // Reset rotation to default
       }
     });
   });
@@ -336,7 +336,7 @@ uiContainer.style.position = "absolute";
 uiContainer.style.top = "0px";
 uiContainer.style.left = "5px";
 uiContainer.style.width = "150px"; 
-uiContainer.style.height = "250px";// Adjust width as needed
+uiContainer.style.height = "100%";// Adjust width as needed
 uiContainer.style.padding = "10px";
 uiContainer.style.borderRadius = "10px";
 uiContainer.style.backgroundColor = "#000"; // Grey background
@@ -358,7 +358,7 @@ moveToContainer(videoSlider);
 
 // Create "Toggle Videos" button
 const toggleVideosButton = document.createElement("button");
-toggleVideosButton.textContent = "Off"; // Initial state (Videos Off)
+toggleVideosButton.textContent = "Off"; // Initial state
 toggleVideosButton.style.position = "absolute";
 toggleVideosButton.style.top = "30px";
 toggleVideosButton.style.left = "100px"; // Position next to Reset button
@@ -371,6 +371,7 @@ toggleVideosButton.style.border = "none";
 toggleVideosButton.style.cursor = "pointer";
 toggleVideosButton.style.borderRadius = "100px";
 
+
 // Append button to the UI container
 moveToContainer(toggleVideosButton);
 
@@ -378,8 +379,6 @@ moveToContainer(toggleVideosButton);
 const grayMaterial = new THREE.MeshStandardMaterial({ color: 0x000001 });
 
 let videosAreOn = true; // Track the state
-
-
 
 toggleVideosButton.addEventListener("click", () => {
   if (videosAreOn) {
@@ -546,9 +545,31 @@ twistLabel.style.zIndex = "9999";
 twistLabel.style.padding = "5px 10px";
 twistLabel.style.borderRadius = "5px";
 
-// Append the twist slider and label to the UI container
+
+// Create the descriptive text container
+const descriptionText = document.createElement("div");
+descriptionText.innerHTML = `
+    <p style="color: #FFFFFF; font-size: 11px; text-align: left; margin-top: 40px;">
+        Neon Lights is a 3D modular typeface designed in Blender and powered by Three.js, HTML, CSS, and JavaScript.
+        Pull the chain to adjust sliders, press buttons, and drag letters to create your own glowing neon sign in real-time.
+        <br><br>
+        Designed by Jovonka Johnson<br>
+        Spring 2025<br>
+       Advanced Interaction Design
+    </p>
+`;
+descriptionText.style.position = "absolute";
+descriptionText.style.top = "250px"; // Adjust to fit under the slider
+descriptionText.style.left = "50%";
+descriptionText.style.transform = "translateX(-50%)";
+descriptionText.style.width = "90%";
+descriptionText.style.maxWidth = "400px";
+descriptionText.style.zIndex = "9999";
+
+// Append elements to the UI container
 moveToContainer(twistLabel);
 moveToContainer(twistSlider);
+moveToContainer(descriptionText);
 
 twistSlider.addEventListener("input", () => {
   const twistValue = parseFloat(twistSlider.value);
@@ -556,7 +577,7 @@ twistSlider.addEventListener("input", () => {
   models.forEach((model, index) => {
     model.traverse((child) => {
       if (child.isMesh) {
-        child.rotation.y = twistValue * (index % 1 === 0 ? 1 : -1); // Alternate twist directions
+        child.rotation.z = twistValue * (index % 1 === 0 ? 1 : -1); // Alternate twist directions
       }
     });
   });
@@ -675,7 +696,7 @@ function toggleButtonPosition() {
 dropdownButton.addEventListener("click", toggleButtonPosition);
 
 // Initially hide the UI container (sliders and controls)
-uiContainer.style.transition = "height 0.5s ease-in-out"; // Smooth height transition
+uiContainer.style.transition = "height 0.9s ease-in-out"; // Smooth height transition
 uiContainer.style.height = "0px"; // Initially collapsed
 uiContainer.style.overflow = "hidden"; // Hide overflow content when collapsed
 
@@ -688,7 +709,7 @@ dropdownButton.addEventListener("click", () => {
     uiContainer.style.height = "0%";
   } else {
     // Expand the container (show the sliders)
-    uiContainer.style.height = "35%"; // Set to the container's full height
+    uiContainer.style.height = "70%"; // Set to the container's full height
   }
 
   // Toggle the state
@@ -708,3 +729,4 @@ moveToContainer(twistSlider);
 moveToContainer(bloomLabel);
 moveToContainer(bloomSlider);
 moveToContainer(toggleVideosButton);
+
