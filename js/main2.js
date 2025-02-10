@@ -569,7 +569,7 @@ const descriptionText = document.createElement("div");
 descriptionText.innerHTML = `
     <p style="color: #FFFFFF; font-size: 16px; text-align: left; margin-top: 40px;">
         Neon Lights is a 3D modular typeface designed in Blender and powered by Three.js, HTML, CSS, and JavaScript.
-        Pull the chain to adjust sliders, press buttons, and drag letters to create your own glowing neon sign in real-time.
+        Pull the chain to adjust sliders, press buttons, and drag letters to create your own glowing neon sign!
        
     </p>
 `;
