@@ -35,12 +35,16 @@ videoElement.autoplay = true;
 const videoSources = [
   "./videos/video1.mp4",
   "./videos/video2.mp4",
-  "./videos/video3.mp4",
+
   "./videos/video4.mp4",
   "./videos/video5.mp4",
+
+
+
+  "./videos/video10.mp4",
 ];
 let currentVideoIndex = 0;
-let playbackSpeed = -10;
+let playbackSpeed = 0;
 
 function playVideo(source) {
   videoElement.src = source;
@@ -66,7 +70,7 @@ const videoMaterial = new THREE.ShaderMaterial({
   uniforms: {
     videoTexture: { value: videoTexture },
     brightness: { value: brightness },
-    offset: { value: new THREE.Vector2(10, 10) },
+    offset: { value: new THREE.Vector2(1, 1) },
     videoSize: { value: videoSize }
   },
   vertexShader: `
@@ -264,6 +268,10 @@ videoSlider.style.top = "100px";
 videoSlider.style.left = "10px";
 videoSlider.style.zIndex = "9999";
 videoSlider.style.width = "150px";
+videoSlider.style.background = "gray"; // Changes the default track color (only works in some browsers)
+videoSlider.style.webkitAppearance = "none"; // Removes default styling
+videoSlider.style.height = "10px"; // Adjust track height
+videoSlider.style.borderRadius = "10px"; // Round edges
 
 // Create a label for the slider
 const videoLabel = document.createElement("label");
@@ -397,7 +405,7 @@ toggleVideosButton.addEventListener("click", () => {
     });
 
     toggleVideosButton.textContent = "On"; // Update button text
-
+    toggleVideosButton.style.backgroundColor = "#4F7942";
     // Hide video slider, show color slider
     videoSlider.style.display = "none";
     videoLabel.style.display = "none";
@@ -417,7 +425,7 @@ toggleVideosButton.addEventListener("click", () => {
     });
 
     toggleVideosButton.textContent = "Off"; // Update button text
-
+    toggleVideosButton.style.backgroundColor = "#888";
     // Hide color slider, show video slider
     colorSlider.style.display = "none";
     colorLabel.style.display = "none";
@@ -437,7 +445,7 @@ colorSlider.style.top = "100px";
 colorSlider.style.left = "10px";
 colorSlider.style.zIndex = "9999";
 colorSlider.style.display = "none"; // Initially hidden
-
+colorSlider.style.backgroundColor = "#888";
 // Create a label for the color slider
 const colorLabel = document.createElement("label");
 colorLabel.textContent = "Color: ";
@@ -480,6 +488,10 @@ thicknessSlider.style.top = "150px";
 thicknessSlider.style.left = "10px";
 thicknessSlider.style.zIndex = "9999";
 thicknessSlider.style.width = "150px";
+thicknessSlider.style.background = "gray"; // Changes the default track color (only works in some browsers)
+thicknessSlider.style.webkitAppearance = "none"; // Removes default styling
+thicknessSlider.style.height = "10px"; // Adjust track height
+thicknessSlider.style.borderRadius = "10px"; // Round edges
 
 // Create a label for the thickness slider
 const thicknessLabel = document.createElement("label");
@@ -532,6 +544,10 @@ twistSlider.style.top = "239px";
 twistSlider.style.left = "10px";
 twistSlider.style.zIndex = "9999";
 twistSlider.style.width = "150px";
+twistSlider.style.background = "gray"; // Changes the default track color (only works in some browsers)
+twistSlider.style.webkitAppearance = "none"; // Removes default styling
+twistSlider.style.height = "10px"; // Adjust track height
+twistSlider.style.borderRadius = "10px"; // Round edges
 
 // Create a label for the twist slider
 const twistLabel = document.createElement("label");
@@ -577,6 +593,10 @@ bloomSlider.style.top = "200px";
 bloomSlider.style.left = "10px";
 bloomSlider.style.zIndex = "9999";
 bloomSlider.style.width = "150px";
+bloomSlider.style.background = "gray"; // Changes the default track color (only works in some browsers)
+bloomSlider.style.webkitAppearance = "none"; // Removes default styling
+bloomSlider.style.height = "10px"; // Adjust track height
+bloomSlider.style.borderRadius = "10px"; // Round edges
 
 // Create a label for the Bloom Slider
 const bloomLabel = document.createElement("label");
