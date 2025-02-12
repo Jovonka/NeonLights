@@ -264,7 +264,7 @@ videoSlider.min = "0";
 videoSlider.max = (videoSources.length - 1).toString();
 videoSlider.value = "0"; // Default value
 videoSlider.style.position = "absolute";
-videoSlider.style.top = "100px";
+videoSlider.style.top = "110px";
 videoSlider.style.left = "10px";
 videoSlider.style.zIndex = "9999";
 videoSlider.style.width = "150px";
@@ -343,8 +343,8 @@ const uiContainer = document.createElement("div");
 uiContainer.style.position = "absolute";
 uiContainer.style.top = "0px";
 uiContainer.style.left = "5px";
-uiContainer.style.width = "200px"; 
-uiContainer.style.height = "100%";// Adjust width as needed
+uiContainer.style.width = "170px"; 
+uiContainer.style.height = "250px";// Adjust width as needed
 uiContainer.style.padding = "10px";
 uiContainer.style.borderRadius = "10px";
 uiContainer.style.backgroundColor = "#000"; // Grey background
@@ -366,7 +366,7 @@ moveToContainer(videoSlider);
 
 // Create "Toggle Videos" button
 const toggleVideosButton = document.createElement("button");
-toggleVideosButton.textContent = "Off"; // Initial state
+toggleVideosButton.textContent = "Off"; // Initial state (Videos Off)
 toggleVideosButton.style.position = "absolute";
 toggleVideosButton.style.top = "30px";
 toggleVideosButton.style.left = "100px"; // Position next to Reset button
@@ -379,7 +379,6 @@ toggleVideosButton.style.border = "none";
 toggleVideosButton.style.cursor = "pointer";
 toggleVideosButton.style.borderRadius = "100px";
 
-
 // Append button to the UI container
 moveToContainer(toggleVideosButton);
 
@@ -387,6 +386,8 @@ moveToContainer(toggleVideosButton);
 const grayMaterial = new THREE.MeshStandardMaterial({ color: 0x000001 });
 
 let videosAreOn = true; // Track the state
+
+
 
 toggleVideosButton.addEventListener("click", () => {
   if (videosAreOn) {
@@ -405,7 +406,6 @@ toggleVideosButton.addEventListener("click", () => {
 
     toggleVideosButton.textContent = "On"; // Update button text
     toggleVideosButton.style.backgroundColor = "#4F7942";
-   
     // Hide video slider, show color slider
     videoSlider.style.display = "none";
     videoLabel.style.display = "none";
@@ -426,7 +426,6 @@ toggleVideosButton.addEventListener("click", () => {
 
     toggleVideosButton.textContent = "Off"; // Update button text
     toggleVideosButton.style.backgroundColor = "#888";
-   
     // Hide color slider, show video slider
     colorSlider.style.display = "none";
     colorLabel.style.display = "none";
@@ -442,14 +441,14 @@ const colorSlider = document.createElement("input");
 colorSlider.type = "color";
 colorSlider.value = "#C0C0C0"; // Default color
 colorSlider.style.position = "absolute";
-colorSlider.style.top = "100px";
+colorSlider.style.top = "107px";
 colorSlider.style.left = "10px";
 colorSlider.style.zIndex = "9999";
 colorSlider.style.display = "none"; // Initially hidden
 colorSlider.style.backgroundColor = "#888";
 // Create a label for the color slider
 const colorLabel = document.createElement("label");
-colorLabel.textContent = "Color: ";
+colorLabel.textContent = "Text Color: ";
 colorLabel.style.position = "absolute";
 colorLabel.style.top = "80px";
 colorLabel.style.left = "10px";
@@ -485,7 +484,7 @@ thicknessSlider.max = "9";
 thicknessSlider.step = "0.05";
 thicknessSlider.value = "1"; // Default thickness
 thicknessSlider.style.position = "absolute";
-thicknessSlider.style.top = "150px";
+thicknessSlider.style.top = "175px";
 thicknessSlider.style.left = "10px";
 thicknessSlider.style.zIndex = "9999";
 thicknessSlider.style.width = "150px";
@@ -498,7 +497,7 @@ thicknessSlider.style.borderRadius = "10px"; // Round edges
 const thicknessLabel = document.createElement("label");
 thicknessLabel.textContent = "Thickness:";
 thicknessLabel.style.position = "absolute";
-thicknessLabel.style.top = "125px";
+thicknessLabel.style.top = "140px";
 thicknessLabel.style.left = "1px";
 
 thicknessLabel.style.color = "#FFFFFF";
@@ -541,7 +540,7 @@ twistSlider.max = "1"; // Twist right
 twistSlider.step = "0.05";
 twistSlider.value = "0"; // Default (no twist)
 twistSlider.style.position = "absolute";
-twistSlider.style.top = "239px";
+twistSlider.style.top = "290px";
 twistSlider.style.left = "10px";
 twistSlider.style.zIndex = "9999";
 twistSlider.style.width = "150px";
@@ -554,7 +553,7 @@ twistSlider.style.borderRadius = "10px"; // Round edges
 const twistLabel = document.createElement("label");
 twistLabel.textContent = "Rotate: ";
 twistLabel.style.position = "absolute";
-twistLabel.style.top = "217px";
+twistLabel.style.top = "257px";
 twistLabel.style.left = "4px";
 twistLabel.style.color = "#FFFFFF";
 twistLabel.style.fontSize = "18px";
@@ -567,24 +566,26 @@ twistLabel.style.borderRadius = "5px";
 // Create the descriptive text container
 const descriptionText = document.createElement("div");
 descriptionText.innerHTML = `
-    <p style="color: #FFFFFF; font-size: 16px; text-align: left; margin-top: 40px;">
-        Neon Lights is a 3D modular typeface designed in Blender and powered by Three.js, HTML, CSS, and JavaScript.
+    <p style="color: #FFFFFF; font-size: 10px; text-align: left; margin-top: 40px;">
+       <i> Neon Lights </i> is a 3D modular typeface designed in Blender and powered by Three.js, HTML, CSS, and JavaScript.
         Pull the chain to adjust sliders, press buttons, and drag letters to create your own glowing neon sign!
        
     </p>
 `;
 descriptionText.style.position = "absolute";
-descriptionText.style.top = "250px"; // Adjust to fit under the slider
+descriptionText.style.top = "420px"; // Adjust to fit under the slider
 descriptionText.style.left = "50%";
 descriptionText.style.transform = "translateX(-50%)";
 descriptionText.style.width = "90%";
 descriptionText.style.maxWidth = "400px";
 descriptionText.style.zIndex = "9999";
 
-// Append elements to the UI container
+
+moveToContainer(descriptionText);
+
+// Append the twist slider and label to the UI container
 moveToContainer(twistLabel);
 moveToContainer(twistSlider);
-moveToContainer(descriptionText);
 
 twistSlider.addEventListener("input", () => {
   const twistValue = parseFloat(twistSlider.value);
@@ -609,7 +610,7 @@ bloomSlider.max = "1.5"; // Max bloom
 bloomSlider.step = "0.1";
 bloomSlider.value = "0"; // Default bloom intensity
 bloomSlider.style.position = "absolute";
-bloomSlider.style.top = "200px";
+bloomSlider.style.top = "230px";
 bloomSlider.style.left = "10px";
 bloomSlider.style.zIndex = "9999";
 bloomSlider.style.width = "150px";
@@ -622,7 +623,7 @@ bloomSlider.style.borderRadius = "10px"; // Round edges
 const bloomLabel = document.createElement("label");
 bloomLabel.textContent = "Glow: ";
 bloomLabel.style.position = "absolute";
-bloomLabel.style.top = "176px";
+bloomLabel.style.top = "197px";
 bloomLabel.style.left = "2px";
 bloomLabel.style.color = "#FFFFFF";
 bloomLabel.style.fontSize = "18px";
@@ -715,7 +716,7 @@ function toggleButtonPosition() {
 dropdownButton.addEventListener("click", toggleButtonPosition);
 
 // Initially hide the UI container (sliders and controls)
-uiContainer.style.transition = "height 0.9s ease-in-out"; // Smooth height transition
+uiContainer.style.transition = "height 0.8s ease-in-out"; // Smooth height transition
 uiContainer.style.height = "0px"; // Initially collapsed
 uiContainer.style.overflow = "hidden"; // Hide overflow content when collapsed
 
@@ -728,7 +729,7 @@ dropdownButton.addEventListener("click", () => {
     uiContainer.style.height = "0%";
   } else {
     // Expand the container (show the sliders)
-    uiContainer.style.height = "70%"; // Set to the container's full height
+    uiContainer.style.height = "75%"; // Set to the container's full height
   }
 
   // Toggle the state
@@ -749,3 +750,84 @@ moveToContainer(bloomLabel);
 moveToContainer(bloomSlider);
 moveToContainer(toggleVideosButton);
 
+// Create a background color slider
+const bgColorSlider = document.createElement("input");
+bgColorSlider.type = "color";
+bgColorSlider.value = "#222222"; // Default background color
+bgColorSlider.style.position = "absolute";
+bgColorSlider.style.top = "345px";
+bgColorSlider.style.left = "80px";
+bgColorSlider.style.zIndex = "9999";
+bgColorSlider.style.backgroundColor = "#888";
+
+// Create a label for the background color slider
+const bgColorLabel = document.createElement("label");
+bgColorLabel.textContent = "Background Color: ";
+bgColorLabel.style.position = "absolute";
+bgColorLabel.style.top = "320px";
+bgColorLabel.style.left = "10px";
+bgColorLabel.style.color = "#FFFFFF";
+bgColorLabel.style.fontSize = "18px";
+bgColorLabel.style.zIndex = "9999";
+
+// Append background color slider and label
+moveToContainer(bgColorLabel);
+moveToContainer(bgColorSlider);
+
+// Change background color when slider moves
+bgColorSlider.addEventListener("input", () => {
+  scene.background = new THREE.Color(bgColorSlider.value);
+  console.log("Updated background color to:", bgColorSlider.value);
+});
+
+// Create a button to randomize 3D models' positions
+const randomizeButton = document.createElement("button");
+randomizeButton.textContent = "Randomize Position";
+randomizeButton.style.position = "absolute";
+randomizeButton.style.top = "400px";
+randomizeButton.style.left = "3px";
+randomizeButton.style.zIndex = "9999";
+randomizeButton.style.padding = "7px";
+randomizeButton.style.fontSize = "16px";
+randomizeButton.style.cursor = "pointer";
+randomizeButton.style.borderRadius = "10px"; // Round edges
+randomizeButton.style.color = "white";
+randomizeButton.style.background = "gray";
+// Append the button to the UI
+moveToContainer(randomizeButton);
+
+// Function to check for overlapping models
+function isOverlapping(newPos, existingPositions, minDistance) {
+  for (let pos of existingPositions) {
+    const distance = newPos.distanceTo(pos);
+    if (distance < minDistance) {
+      return true; // Overlap detected
+    }
+  }
+  return false;
+}
+
+// Randomize models' positions when button is clicked
+randomizeButton.addEventListener("click", () => {
+  const existingPositions = [];
+  const minDistance = 2; // Minimum distance between models
+
+  models.forEach((model) => {
+    let newPosition;
+    let attempts = 0;
+
+    do {
+      newPosition = new THREE.Vector3(
+        (Math.random() - 0.5) * 10, // Random X within -5 to 5
+        (Math.random() - 0.5) * 5,  // Random Y within -2.5 to 2.5
+        (Math.random() - 0.5) * 10  // Random Z within -5 to 5
+      );
+      attempts++;
+    } while (isOverlapping(newPosition, existingPositions, minDistance) && attempts < 20);
+
+    model.position.set(newPosition.x, newPosition.y, newPosition.z);
+    existingPositions.push(newPosition);
+  });
+
+  console.log("Randomized model positions!");
+});
