@@ -1,7 +1,7 @@
-// Three.js core
+// Core Three.js
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.129.0/build/three.module.js";
 
-// FBX Loader
+// Loaders
 import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/loaders/FBXLoader.js";
 
 // Postprocessing
