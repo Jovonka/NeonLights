@@ -1,9 +1,13 @@
-import * as THREE from "../node_modules/three/build/three.module.js";
-import { FBXLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/FBXLoader.js";
-import { EffectComposer } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/postprocessing/EffectComposer.js";
-import { RenderPass } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/postprocessing/RenderPass.js";
-import { UnrealBloomPass } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/postprocessing/UnrealBloomPass.js";
+// Three.js core
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.129.0/build/three.module.js";
 
+// FBX Loader
+import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/loaders/FBXLoader.js";
+
+// Postprocessing
+import { EffectComposer } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/postprocessing/UnrealBloomPass.js";
 // Scene setup
 const scene = new THREE.Scene();
 
