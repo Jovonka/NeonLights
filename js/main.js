@@ -3,6 +3,7 @@ import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/j
 import { EffectComposer } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "https://cdn.jsdelivr.net/npm/three@0.129.0/examples/jsm/postprocessing/UnrealBloomPass.js";
+
 // Scene setup
 const scene = new THREE.Scene();
 
